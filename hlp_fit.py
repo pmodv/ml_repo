@@ -89,7 +89,7 @@ parameters = [
         "reduce_dim": [PCA(iterated_power=7)],
         "reduce_dim__n_components": N_FEATURES_OPTIONS,
 
-        'classifier': (LogisticRegression(class_weight='balanced'),),
+        'classifier': (LogisticRegression(class_weight='balanced',n_jobs=-1),),
         'classifier__C': (0.001,0.01,0.1,1)
     }, 
     {
@@ -99,7 +99,7 @@ parameters = [
         "reduce_dim__kernel": ["rbf", "sigmoid"],
 
         
-        'classifier': (LogisticRegression(class_weight='balanced'),),
+        'classifier': (LogisticRegression(class_weight='balanced',n_jobs=-1),),
         'classifier__C': (0.001,0.01,0.1,1)
     }]
     
