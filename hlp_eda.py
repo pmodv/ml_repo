@@ -209,11 +209,12 @@ if __name__ == '__main__':
 
 
 
+    plt.title("Histogram of accounts with more than 0 5's")
 
     plt.hist(df_5_count_pos['5_count'],bins=100)
     plt.show()
 
-
+    plt.title("Histogram of accounts with more 40% 5's")
     plt.hist(df_default_hi['5_count'],bins=10)
     plt.show()
     
